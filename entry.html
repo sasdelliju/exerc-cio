@@ -3,11 +3,42 @@
 		<title>Teste</title>
 		<meta charset="utf-8" />
 		
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	
+		<link rel="stylesheet" 
+			  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+			  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+			  crossorigin="anonymous">
 	</head>	
 	
 	<body>
+		
+		<form>
+			
+			<div class="form-group">
+			    <label for="cep">Buscar CEP</label>
+			    <input class="form-control" type="text" name="cep_entered" id="cep_entered">
+			</div>
+			<!--<input type="submit" value="Buscar CEP">-->	
+			<button type="button" class="btn btn-primary" onclick="ovly.conversor.chamarAPI()">Converter</button>
+		</form>		
+
+         <div class="form-group">
+            <label>Dados do CEP entrado</label>
+            <p class="lead">
+            <span id="resultado_cep"></span>,
+            </p>
+            <p>
+            <span id="resultado_logradouro"></span>,
+            </p>
+            <p>
+            <span id="resultado_bairro"></span>,
+            </p>
+            <p>
+            <span id="resultado_cidade"></span>
+            </p>            
+            <p>
+            <span id="resultado_estado"></span>
+            </p>
+         </div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
